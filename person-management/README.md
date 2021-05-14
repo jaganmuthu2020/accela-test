@@ -6,11 +6,11 @@ This is a Java / Maven / Spring Boot application which provides Rest Controller 
 ## Installation Instructions
 - I have have created Spring boot Maven project(person-management) to complete this home test. 
 - Configured with port 8888.
-- I have added the sqllite db under the db folder.
+- Configured SQLite database and stored db under db folder with in project location.
 - Configured the error logs under the log folder.
 - Enabled Swagger UI to validate the Rest-Client.
 	http://localhost:8888/accela-person/swagger-ui.html
-- Run the Spring boot applicaiton under person-management.
+- Run the Spring boot applicaiton to check the functionality.
 	
 
 ## What you'll need
