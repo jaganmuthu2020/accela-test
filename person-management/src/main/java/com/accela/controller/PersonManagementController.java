@@ -47,6 +47,7 @@ public class PersonManagementController {
 
 	@DeleteMapping("/person/{id}")
 	public void deletePerson(@Valid @PathVariable String id) throws RecordNotFoundException {
+		log.debug("Person ID for delete:"+id);
 		personService.deletePerson(id);
 	}
 

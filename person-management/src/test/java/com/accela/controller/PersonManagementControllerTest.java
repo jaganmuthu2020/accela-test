@@ -20,12 +20,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.validation.BeanPropertyBindingResult;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 
 import com.accela.entity.Address;
 import com.accela.entity.Person;
@@ -78,14 +75,6 @@ class PersonManagementControllerTest {
 		ObjectWriter objectWriter = new ObjectMapper().writer().withDefaultPrettyPrinter();
 
 		when(personService.saveOrUpdatePerson(any())).thenReturn(person);
-
-		/*
-		 * mockMvc.perform(post(PERSON_SERVICE_URL).contentType(MediaType.
-		 * APPLICATION_JSON_VALUE))
-		 * .andExpect(status().isOk()).andExpect(content().json(objectWriter.
-		 * writeValueAsString(person)));
-		 */
-
 		MvcResult mvcResult = mockMvc.perform(post(PERSON_SERVICE_URL).contentType(MediaType.APPLICATION_JSON_VALUE)
 				.content(objectWriter.writeValueAsString(person))).andReturn();
 		int status = mvcResult.getResponse().getStatus();
