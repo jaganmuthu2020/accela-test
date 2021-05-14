@@ -17,6 +17,11 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import com.accela.controller.PersonManagementController;
 
+/**
+ * Controller advice class used to send the error response back to caller with proper http error codes
+ * 
+ *
+ */
 @ControllerAdvice
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 

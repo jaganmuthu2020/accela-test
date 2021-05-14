@@ -16,6 +16,11 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+/**
+ * This class used to configure the Swagger details. 
+ * 
+ *
+ */
 @Configuration
 @EnableSwagger2
 @Import(BeanValidatorPluginsConfiguration.class)
